@@ -169,3 +169,9 @@ The forward slashes in a terminal console represent directories, with the home d
 Navigate your terminal to your home directory(the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to keep your software in it, oddly enough. Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.  
 
 ---
+
+3 tasks:
+
+1. Print all of the contents of the downloaded dataset to terminal window ("standard output")
+2. Print how many lines there are in the file
+3. Print how many lines there are in the file **THAT CONTAIN GENETIC DATA** (no headers)
