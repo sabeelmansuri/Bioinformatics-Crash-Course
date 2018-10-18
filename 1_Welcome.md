@@ -1,6 +1,6 @@
-# Hi There
+# Hello There
 
-#### Skills: A vague understanding of what Bioinformatics is???
+#### Skills: A vague understanding of what Bioinformatics is(???)
 
 ## The Big Picture
 
