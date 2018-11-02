@@ -1,5 +1,3 @@
-ssh smansuri@ec2-18-188-27-13.us-east-2.compute.amazonaws.com
-
 # Your favorite rectangle: the terminal
 
 #### Skill: UNIX/Command Line + RNA-seq quantification
