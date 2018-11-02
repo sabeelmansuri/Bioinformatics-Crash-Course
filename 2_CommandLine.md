@@ -1,3 +1,5 @@
+ssh smansuri@ec2-18-188-27-13.us-east-2.compute.amazonaws.com
+
 # Your favorite rectangle: the terminal
 
 #### Skill: UNIX/Command Line + RNA-seq quantification
@@ -17,9 +19,9 @@ I set up accounts for everyone based on the usernames from last time. Click [her
 
 ***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
 
-**Windows:** Open putty, paste ```my_username@ec2-52-15-126-191.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
+**Windows:** Open putty, paste ```my_username@ec2-18-188-27-13.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
 
-**Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh my_username@ec2-52-15-126-191.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
+**Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh my_username@ec2-18-188-27-13.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
 
 **Some things to keep in mind:** I have some promotional credits for EC2, but they are not infinite. Please help me not run over budget by following my instructions and asking if you are unsure of what you are doing. Processing power is plentiful and the rate charged is constant, but storage can add up if everyone uploads large files. Please only upload what I ask you to upload. A few megabytes here and there is fine but please do not go uploading several gigabytes at a time. In addition, the actual process of uploading costs no money but downloading from EC2 does. Again, just download when I ask you to. Thanks!!
 
