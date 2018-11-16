@@ -1,3 +1,7 @@
+@ec2-18-224-61-7.us-east-2.compute.amazonaws.com 
+
+
+
 # Your favorite rectangle: the terminal
 
 #### Skill: UNIX/Command Line + RNA-seq quantification
