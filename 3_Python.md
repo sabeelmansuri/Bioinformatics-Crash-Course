@@ -183,12 +183,49 @@ Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints 
 
 **Make sure you don't attempt to transcribe the header lines!**
 
+#### SOLUTION
+```python
+file = open("test.fasta", "r")
+
+for line in file:
+  if line[0] != ">":
+    ans = ""
+    for char in line:
+      if char == "T":
+        ans += "U"
+      else:
+        ans += char
+    print ans
+  else:
+    print line
+```
 
 ### Challenge 2
 
 Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the percentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content). Don't worry about whitespace stripping (especially if you don't know what that is).
 
 **Hint: If you keep getting 0, try explicitly converting either the GC count or the string length to a decimal using float()**
+
+
+#### SOLUTION
+```python
+file = open("test.fasta", "r")
+
+siz = 0
+gc = 0
+for line in file:
+  # This next line is optional and has to do with whitespace stripping. It changes the answer by a little--don't worry about it.
+  line = line.strip()
+  if line[0] != ">":
+    for char in line:
+      siz += 1
+      if char == "G" or char == "C":
+        gc += 1
+
+ans = gc/float(siz)
+print ans*100
+```
+
 
 ## Credits
 
