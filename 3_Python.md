@@ -156,7 +156,7 @@ Great! BioPython is now available on your account. Let's use it. Create a new fi
 from Bio.Blast import NCBIWWW
 
 fasta_string = open("small.fasta").read()
-result_handle = NCBIWWW.qblast("blastn", "nt", fasta_string)
+result_handle = NCBIWWW.qblast("blastn", "nt", fasta_string, format_type='Text', hitlist_size=1)
 print result_handle.read()
 ```
 
