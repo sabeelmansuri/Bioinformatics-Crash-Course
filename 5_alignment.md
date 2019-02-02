@@ -49,7 +49,7 @@ Multiple sequence alignment aligns multiple sequences, but its inner workings ar
 
 There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. Picking this topic is no coincidence, if you want to see the application my lab has made for this type alignment head [over here](http://flea.murrell.group/view/P018/sequences/). The sequences shown here are from an HIV envelope. If you click on on amino acid index, you can see a graph showing how the amino acid in that position evolved over time. You can explore the site - I recommend the tree section because it is pretty. I did not make this specific page, I am currently finishing up a webapp that will generate these pages from datasets automatically. 
 
-I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
+I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. If you are really stuck or there is no time left, take a look at my implementation at ```/srv/Python2/not_codon_align.py```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
 
 **PLEASE NOTE:** A good programmer is good at finding mistakes, test each step to find yours. Also, I underestimated the volume of work in this challenge - I tried to provide as much help as possible without giving the exercise away. Do not worry if you don't finish all the steps, working on this will definitely get you hands on in Python. 
 
@@ -100,7 +100,14 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 
 **5.** You now have a good looking amino acid alignment, but how does it look as actual *codons*? 
 
-⋅⋅**a.** 
+⋅⋅**a.** Go through each amino acid in the aligned amino acid array
+
+⋅⋅**b.** If it's a regular amino acid, go ahead and take next three nucelotides from the degapped nucleotide array (the one with the n's). If it's a gap, think about how many gaps that corresponds to in nuceotide space (hint: it's three) and insert those gaps. 
+
+
+
+
+
 
 
 
