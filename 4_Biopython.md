@@ -116,7 +116,7 @@ print "Complement of strings: "
 print "Reverse complement of strings: "
 ```
 
-### 🔸 You've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
+### 🔸 You've completed the first part of today's lesson. Move on to the next part on alignment located [here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/5_Alignment.md).
 
 ## Credits
 
