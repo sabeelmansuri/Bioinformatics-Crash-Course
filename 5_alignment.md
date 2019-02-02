@@ -1,4 +1,4 @@
-# The First Bioinformatics Problem: Alignment
+# Alignment
 
 #### Skill: More python and some knowledge of alignment methodology
 
