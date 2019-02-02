@@ -12,7 +12,7 @@ In order to see why alignments are useful on a larger scale, let us start by loo
 
 In this case, the word "global" just means that the entire first string is aligned as best as possible to the entire second string. 
 
-First, make a file called ```aligners.py``` and import the ```pairwise2``` module from the BioPython library and the ```format_alignment``` method from the ```pairwise2``` module. **HINT: look at part 5 to find the correct import syntax**
+First, make a file called ```aligners.py``` and import the ```pairwise2``` module from the BioPython library and the ```format_alignment``` method from the ```pairwise2``` module. **HINT: look at part 4 to find the correct import syntax**
 
 Now, define two small strings containing DNA sequences. I recommend using ```TGCCTTAG``` and ```TGCTTGC``` for an easy to look at example. Call the default pairwise alignment method, called 
 
