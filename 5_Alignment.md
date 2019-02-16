@@ -57,7 +57,12 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 **PLEASE NOTE:** A good programmer is good at finding mistakes, test each step to find yours. Also, I underestimated the volume of work in this challenge - I tried to provide as much help as possible without giving the exercise away. Do not worry if you don't finish all the steps, working on this will definitely get you hands on in Python. 
 
-**1.** Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module. 
+**1.** Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module.
+
+<details>
+  <summary>Want to know why we do this? click here</summary>
+  Sequencing starts at many different points, and we don't know ahead of time where the points are. If we don't identify where one sequence starts relative to another, we cannot begin comparing them. Why the N's? That's because the biological meaning of N's is different than that of gaps. Gaps in an alignment indicate deletions or insertions from one sequence to another, we predict that something was removed or added. In the case of different starting points, we know that *something* is supposed to be there, since we have information from other sequences. Thus it is not an insertion or deletion, but unkown nucleotides. We represent this with N's. 
+</details></br>
 
 <details>
   <summary>Can't figure out the correct syntax to call mafft? click here</summary>
