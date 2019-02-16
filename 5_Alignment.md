@@ -63,7 +63,8 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
   <summary>Want to know the biological reason why we do this? click here</summary>
   
   
-```Sequencing starts at many different points, and we don't know ahead of time where the points are. If we don't identify where one sequence starts relative to another, we cannot begin comparing them. Why the N's? That's because the biological meaning of N's is different than that of gaps. Gaps in an alignment indicate deletions or insertions from one sequence to another, we predict that something was removed or added. In the case of different starting points, we know that *something* is supposed to be there, since we have information from other sequences. Thus it is not an insertion or deletion, but unkown nucleotides. We represent this with N's. 
+```
+Sequencing starts at many different points, and we don't know ahead of time where the points are. If we don't identify where one sequence starts relative to another, we cannot begin comparing them. Why the N's? That's because the biological meaning of N's is different than that of gaps. Gaps in an alignment indicate deletions or insertions from one sequence to another, we predict that something was removed or added. In the case of different starting points, we know that *something* is supposed to be there, since we have information from other sequences. Thus it is not an insertion or deletion, but unkown nucleotides. We represent this with N's. 
 ```
 
 </details></br>
@@ -99,8 +100,10 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 
 <details>
   <summary>Usually this step is a bit more complicated. To learn more, click over here.</summary>
-
+  
+```
 Even after accounting for the varying starting points in the sequence, we still have the issue of the reading frame. What if every single sequence starts at a nonsense location? All of the translated animo acids will be useless. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons in all of the sequences. In the interest of time, you are encouraged to skip this step and just find the which indices to pick in order to get mulitples of 3 in every sequence.
+```
 
 </details></br>
 
