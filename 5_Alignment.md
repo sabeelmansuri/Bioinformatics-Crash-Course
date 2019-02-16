@@ -57,7 +57,7 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 **PLEASE NOTE:** A good programmer is good at finding mistakes, test each step to find yours. Also, I underestimated the volume of work in this challenge - I tried to provide as much help as possible without giving the exercise away. Do not worry if you don't finish all the steps, working on this will definitely get you hands on in Python. 
 
-**1.** Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module.
+#### **1.** Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module.
 
 <details>
   <summary>Want to know the biological reason why we do this? click here</summary>
@@ -95,7 +95,7 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
   
   ⋅⋅**d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
 
-**2.** Cut all of the sequences in such a way that they can be broken down into codons. 
+#### **2.** Cut all of the sequences in such a way that they can be broken down into codons. 
 
 <details>
   <summary>Usually this step is a bit more complicated. To learn more, click over here.</summary>
@@ -112,12 +112,12 @@ Even after accounting for the varying starting points in the sequence, we still 
 ⋅⋅**c** Based on the remainder you found in b, figure out how much of the sequence you should cut off the end. Syntax hint: ```seq[0:-1]``` will give you the sequence with the last nucleotide cut off. 
 
 
-**3.** Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
+#### **3.** Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
 
-**4.** Mafft align the amino acid sequences from step 4. It's the same syntax as step 1, just put your animo acids in a file. 
+#### **4.** Mafft align the amino acid sequences from step 4. It's the same syntax as step 1, just put your animo acids in a file. 
 
 
-**5.** You now have a good looking amino acid alignment, but how does it look as actual *codons*? 
+#### **5.** You now have a good looking amino acid alignment, but how does it look as actual *codons*? 
 
 ⋅⋅**a.** Go through each amino acid in the aligned amino acid array
 
