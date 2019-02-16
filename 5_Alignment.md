@@ -117,7 +117,7 @@ Even after accounting for the varying starting points in the sequence, we still 
 #### **4.** Mafft align the amino acid sequences from step 4. It's the same syntax as step 1, just put your animo acids in a file. 
 
 
-#### **5.** You now have a good looking amino acid alignment, but how does it look as actual *codons*? 
+#### **5.** You now have a good looking amino acid alignment, but how does it look as actual *codons*? We need to backtranslate from amino acids into codons by inserting the gaps from the amino acid alignment into the nucleotide codons themselves. 
 
 ⋅⋅**a.** Go through each amino acid in the aligned amino acid array
 
