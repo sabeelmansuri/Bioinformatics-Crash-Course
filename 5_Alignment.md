@@ -68,7 +68,9 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 </details></br>
 
-<details>
+  ⋅⋅**a.** Align the file with mafft. 
+  
+  <details>
   <summary>Can't figure out the correct syntax to call mafft? click here</summary>
   
 ```python
@@ -76,12 +78,11 @@ subprocess.call(["mafft", "--out", "nuc_aligned.fasta", in_file])
 ````
 </details></br>
 
-
-  ⋅⋅**a.** Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
+  ⋅⋅**b.** Go through each of the sequences in the mafft aligned file, see part 4 for how to do this
   
-  ⋅⋅**b.** Count the number of initial gaps on each sequence
+  ⋅⋅**c.** Count the number of initial gaps on each sequence
   
-  ⋅⋅**c.** Degap each sequence and place it into a Seq object
+  ⋅⋅**d.** Degap each sequence and place it into a Seq object
   
 <details>
   <summary>Running into type issues? This one is a bit of a pain, so let me give you this</summary>
@@ -92,12 +93,17 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 ````
 </details></br>
   
-  
   ⋅⋅**d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
 
+**2.** Cut all of the sequences in such a way that they can be broken down into codons. 
 
-  
-**2.** Pick a reading frame. Real reads start from different places in the actual sequences, making it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
+<details>
+  <summary>Usually this step is a bit more complicated. To learn more, click over here.</summary>
+
+Even after accounting for the varying starting points in the sequence, we still have the issue of the reading frame. What if every single sequence starts at a nonsense location? All of the translated animo acids will be useless. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons in all of the sequences. In the interest of time, you are encouraged to skip this step and just find the which indices to pick in order to get mulitples of 3 in every sequence.
+
+</details></br>
+
 
 ⋅⋅**a.** Go through each index from 0 to the number of sequences
 
