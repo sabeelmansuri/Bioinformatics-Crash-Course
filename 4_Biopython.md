@@ -1,11 +1,5 @@
 # Bioinformatics x Python
 
-### 🔸 If this is your first time here, please check in with Mark to get an AWS account. Then, a board member can help you connect (SSH) to the cluster
-
-### 🔸 Please fill out this sign-in sheet: https://goo.gl/forms/kOZMaXwCW4PAWRY42
-
-### 🔸 The cluster is live on: [username]@ec2-13-58-151-200.us-east-2.compute.amazonaws.com
-
 ## Introduction
 
 This lesson is a continuation of our previous lesson, Intro to Python, located [here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/3_Python.md). If you're having trouble following this tutorial, are new to Python, or just want a refresher, check that lesson out first.
