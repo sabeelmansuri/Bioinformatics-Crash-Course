@@ -2,9 +2,9 @@
 #### Skills: Biopython, phylogenetic analysis
 
 #### Files:
-(They'll be downloaded with different names than many or single)
-[many.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/phyloxml_examples.xml)
-[single.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/apaf.xml)
+(They'll be downloaded with different names than many or single)  
+[many.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/phyloxml_examples.xml)  
+[single.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/apaf.xml) 
 
 #### SSH: @ec2-18-221-253-106.us-east-2.compute.amazonaws.com
 
