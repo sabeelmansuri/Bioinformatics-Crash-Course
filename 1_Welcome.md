@@ -10,7 +10,7 @@ When I first started taking classes for my major, I had no idea what I was suppo
 
 ### The Alignment Problem
 
-There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. **alignment is the process of arranging sequences in a way to identify regions of similarity that may be a consequence of functional, structural, or evolutionary relationships between the sequences.** In order to understand why alignment is hard and practical problem, we will start by learning a bit about sequencing. 
+There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. **Alignment is the process of arranging sequences in a way to identify regions of similarity that may be a consequence of functional, structural, or evolutionary relationships between the sequences.** In order to understand why alignment is hard and practical problem, we will start by learning a bit about sequencing. 
 
 **Illumina Sequencing:** 
 
@@ -40,7 +40,7 @@ TLDR: There are numerous complex applications of bioinformatics algorithms, from
 
 ### The Clustering Problem 
 
-The general idea behind clustering is the grouping of many elements so that the elements in a cluster are more similar to each other than they are to those in other groups. 
+**Clustering is the the process of assigning data points to groups in such a way that the elements in a group/cluster are more similar to each other than they are to those in other groups.** The definition of what it means to be similar can vary and is determined by the function we use to measure distance between two points. 
 
 **Hierarchical Clustering:** 
 
