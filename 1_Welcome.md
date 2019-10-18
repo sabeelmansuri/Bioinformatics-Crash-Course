@@ -4,7 +4,7 @@
 
 These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics novices some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. The crash course is always in development, so we ask for everyone to be patient and tell us when we are screwing up. Thanks! 
 
-## Task 1: The Big Problems
+## Task 1: The Big Problems - What is the Purpoes of Bioinformatics?
 
 When I first started taking classes for my major, I had no idea what I was supposed to solve with the skills I learned. Thus, the first crash course will include descriptions of some of the things we do. I know lecture style learning is not great, but personally I would have liked to learn about the major problems Bioinformaticians work on so I could feel some sense of purpoes. I will try to make the lecture quick!
 
