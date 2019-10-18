@@ -12,35 +12,11 @@ When I first started taking classes for my major, I had no idea what I was suppo
 
 There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to understand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing (since that is where we, as bioinformaticists, step in). 
 
-**Sanger Sequencing** 
-
-This one is widely taught and known, but a little outdated. 
-
-**1.** Lyse the cells and extract DNA. The DNA itself is fragmented and copied many many times over. 
-
-**2.** Attach primers to the fragments and separate the experiment into 4 tubes. 
-
-**3.** Each tube receives plenty DNA polymerase, plenty deoxynucleosidetriphosphates (dNTPs) and about 1/100th the amount of di-deoxynucleotidetriphosphates (ddNTPs). The issue with ddNTPs is that they don't have the 3'-OH group. Synthesis stops when it a ddNTP is attached, which happens at various points on various fragments. 
-
-**4.** DNA is negatively charged. Heat the DNA to separate it and put through a gel from pos->neg side, which separates fragments with a resolution of 1 nucleotide. 
-
-**5.** The trick is that the ddNTPs are fluorescent! You now have many many fragments whose lengths you know down to the nucleotide. Expose an x-ray film to the gel, and now you have 4 rows representing the 4 nucleotides and dark bands where each of the 4 nucleotides terminated a fragment. Here's a picture to clarify: 
-
-![image of sanger gel](https://upload.wikimedia.org/wikipedia/commons/c/cb/Sequencing.jpg)
-
 **Illumina Sequencing:** 
 
 The most widely used method. This one is a bit harder to explain, so I recommend clicking [here](https://www.youtube.com/watch?v=fCd6B5HRaZ8) to watch a concise video on this topic. 
 
 ![graphic explaining illumina](http://www.3402bioinformaticsgroup.com/wp-content/uploads/2016/07/NGS.png)
-
-**PacBio Sequencing:** 
-
-**1.** DNA is immobilized at the bottom of a small well with a DNA polymerase. 
-
-**2.** Fluorescent nucleotides are introduced to into the well, each labeled with a unique fluorophore.
-
-**3.** Light from the bottom of the well makes the bases fluoresce as they are added to the DNA template by the polymerase and the sequence of light colors is recorded.
 
 ***So, what does it matter?***
 
@@ -101,6 +77,10 @@ Based on a system where elements that are closer together are more similar than 
 *Side Note:* As you will soon learn in your CSE classes, implementation is important and the state of the art alignment and clustering programs do their job quickly and accurately because they attempt to do the minimum amount of work possible. Fast alignment programs like mafft use fancy tricks like Fourier tranforms and fast clustering algorithms often use simpler tricks like transforming into kmer representation. Bioinformatics has lots of data, so you should never attempt to solve a problem by going through all possible combinations or even the majority of all possible combinations. To give the classic stupid example, 80 sequences of length 1000 technically have over 1000^80 possible alignments which is a bit off from the 10^80 atoms in our universe. 
 
 ## Getting Set Up for ssh
+
+Bioinformatics is often space and computation intensive, so we outsource our computational work to a bigger computer called a server.
+
+***Why Linux?*** The majority of servers run on Linux, a free operating system which inherited its predecessor's (GNU's) mission to give users freedom. Linux is completely open source, allowing users to see and modify any part of its inner workings. Linux is also extremely stable, allowing servers to be up for years at a time without restarting. Learning about 
 
 ## Task 2: get an ssh client 
 ***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
