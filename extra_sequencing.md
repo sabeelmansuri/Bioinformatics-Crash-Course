@@ -22,3 +22,11 @@ This one is widely taught and known, but a little outdated.
 
 **3.** Light from the bottom of the well makes the bases fluoresce as they are added to the DNA template by the polymerase and the sequence of light colors is recorded.
 
+**PacBio**
+
+|Pros |Cons|
+|---|---|   
+|- long reads - up to 15kpb |- expensive |
+|- high throughput| - high error rate |
+
+Longer reads means that fewer reads are needed for the same coverage. Clearly, PacBio is best used for the reconstruction of longer genes or entire genomes. 
