@@ -6,21 +6,7 @@
 
 These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics novices some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. You guys are the trial group, since we have never approached UBIC classes this way. We ask for everyone to be patient and tell us when we are screwing up. Thanks! 
 
-## Getting a Computer Set Up
-
-## Task 1: Make Accounts
-
-In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, EC2. We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please [click here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) and enter your name and UCSD username. If you cannot open the link, make sure you are logged into your UCSD email account. I will create an EC2 account for everyone - your username will be your UCSD username. 
-
-***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
-
-**How to prepare for ssh:**
-
-**Windows:** I do not like Windows terminals, you do not like Windows terminals, no one likes Windows terminals. Go to [The Putty website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty. A GUI should appear to guide you through the installation. 
-
-**Mac or Linux:** No preparation necessary, since you already have a native ssh client. 
-
-## Task 2: Learn some biology
+## Task 1: Learn some Bioinformatics
 
 ### The Alignment Problem
 
@@ -114,6 +100,17 @@ Based on a system where elements that are closer together are more similar than 
 
 *Side Note:* As you will soon learn in your CSE classes, implementation is important and the state of the art alignment and clustering programs do their job quickly and accurately because they attempt to do the minimum amount of work possible. Fast alignment programs like mafft use fancy tricks like Fourier tranforms and fast clustering algorithms often use simpler tricks like transforming into kmer representation. Bioinformatics has lots of data, so you should never attempt to solve a problem by going through all possible combinations or even the majority of all possible combinations. To give the classic stupid example, 80 sequences of length 1000 technically have over 1000^80 possible alignments which is a bit off from the 10^80 atoms in our universe. 
 
+## Getting a Computer Set Up
+
+## Task 2: Make Accounts
+***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
+
+**How to prepare for ssh:**
+
+**Windows:** I do not like Windows terminals, you do not like Windows terminals, no one likes Windows terminals. Go to [The Putty website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty. A GUI should appear to guide you through the installation. 
+
+**Mac or Linux:** No preparation necessary, since you already have a native ssh client. 
+
 ## Task 3: Aliview
 
 Okay, we have had enough of conceptual stuff. Let's get at it with some cool visuals. 
@@ -134,7 +131,7 @@ Here's another cool tool: Blast will quickly look up a sequence in the NCBI data
 
 ## Task 4: Explore your EC2
 
-In your email, you should have a password from me. 
+In your email, you should have a password from me. Your username for EC2 is the same as your ucsd username.
 
 **Windows:** Open putty, paste ```ec2-13-59-255-161.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
 
