@@ -8,7 +8,7 @@ These activities are designed for people with zero to some programming experienc
 
 When I first started taking classes for my major, I had no idea what I was supposed to solve with the skills I learned. Thus, the first crash course will include descriptions of some of the things we do. I know lecture style learning is not great, but personally I would have liked to learn about the major problems Bioinformaticians work on so I could feel some sense of purpoes. I will try to make the lecture quick!
 
-### The Alignment Problem
+### The Alignment Problem ([full lesson](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/5_Alignment.md))
 
 There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. **Alignment is the process of arranging sequences in a way to identify regions of similarity that may be a consequence of functional, structural, or evolutionary relationships between the sequences.** In order to understand why alignment is hard and practical problem, we will start by learning a bit about sequencing. 
 
@@ -34,11 +34,10 @@ Besides helping us reconstruct the DNA put into a sequencer, alignment can also
 - Determine which organism an unkown sequence comes from
 - Pinpoint locations where mutations have occured relative to a reference sequence
 - Help determine the evolutionary distance between sequences
-- Much much more, which we will go over in more detail in our [lesson on alignment](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/5_Alignment.md)
 
 TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
 
-### The Clustering Problem 
+### The Clustering Problem ([full lesson](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/6.%20Clustering.md))
 
 **Clustering is the the process of assigning data points to groups in such a way that the elements in a group/cluster are more similar to each other than they are to those in other groups.** The definition of what it means to be similar can vary and is determined by the function we use to measure distance between two points. 
 
@@ -50,8 +49,6 @@ TLDR: There are numerous complex applications of bioinformatics algorithms, from
 - K-means Clustering: Separates a dataset into k groups of points in such a way that the members of a cluster are as close as possible to the center of the cluster they belong to. This type of clustering can check that the datapoints we are observing cluster together by tissue type, experimental conditions, time points, etc. 
 
 - Fuzzy Clustering: Datapoints are not definitively assigned to a specific cluster, rather they are given a likelihood of belonging to a cluster. This can be used to ascertain levels of co expression between genes, revealing genes which may be under common regulatory control. 
-
-Our [lesson on clustering](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/6.%20Clustering.md) goes over several common methods of clustering in detail, as well as their biological meaning. 
 
 ## Getting Set Up for ssh
 
