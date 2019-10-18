@@ -10,7 +10,7 @@ When I first started taking classes for my major, I had no idea what I was suppo
 
 ### The Alignment Problem
 
-There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to understand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing (since that is where we, as bioinformaticists, step in). 
+There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. **alignment is the process of arranging sequences in a way to identify regions of similarity that may be a consequence of functional, structural, or evolutionary relationships between the sequences.** In order to understand why alignment is hard and practical problem, we will start by learning a bit about sequencing. 
 
 **Illumina Sequencing:** 
 
@@ -33,29 +33,6 @@ These tiny reads overlap all over the place. If you imagine the true sequence th
 ![coverage](https://slideplayer.com/slide/5083621/16/images/4/Definition+of+Coverage.jpg)
 
 Alignment allows us to find how two or two thousand sequences line up, allowing us to identify single mutations, reduce error rates, build original(de novo) sequences, and analyze homology to build evolutionary trees. 
-
-***Some problems to keep in mind for later***
-
-Each sequencing platform has its strengths and weaknesses that we will have to account for later.
-
-**Sanger**
-
-|Pros |Cons|
-|---|---|   
-|- High precision - error rates of ~.001% |- low throughput   |
-|- long read length  |- expensive  |
-
-Sanger sequencing is currently only really for small sequence lengths in a small number of samples.
-
-**Illumina**
-
-|Pros |Cons|
-|---|---|   
-|- low cost  |- short reads   |
-|- high throughput   |- not cost effective for small number of targets|
-|- decent precision - error rate: 0.46% - 2.4% |   |
-
-Although the reads are short and the error rate is not as low as Sanger sequencing, Illumina sequencing produces so many sequences that it doesn't matter. Getting the most out of Illumina means getting the most out of its high throughput and per base coverage, which requires the proper software. 
 
 Different tricks are available for different situations (Needleman-Wunsch for pairwise alignment or Burrows-Wheeler transform for aligning many reads to a single template), but we will be focusing mostly on how to use the tools rather than the algorithms within them. 
 
