@@ -24,9 +24,7 @@ Want to learn more about different sequencing methods? We have a document descri
 
 ***Comparing Sequencing Methods and Why they Matter***
 
-Sanger sequencing is another (older) sequencing method, but we will skip its methods to avoid taking too much time on sequencing. 
-
-What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA sequences. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
+What do all sequencing method have in common(yes, even PacBio)?  All produce ridiculous quantities of small DNA sequences. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
 
 These tiny reads overlap all over the place. If you imagine the true sequence these reads came from and place the reads where they came from, you will get many reads piled up over every base pair in the true sequence. The more reads pile up, the more accurately you can predict the actual sequence. A common measure that rates the robustness of an alignment is coverage:
 
@@ -46,7 +44,7 @@ TLDR: There are numerous complex applications of bioinformatics algorithms, from
 
 **Hierarchical Clustering:** 
 
-Based on a system where elements that are closer together are more similar than those that are further apart. In this approach, elements which are close together will be combined into a cluster that is the hybrid location of both elements. So if we have an element a (0, 4) and another at (0, 2), the cluster is at (0, 3). The reason this is interesting to us is that it forms a tree of clusters, which can represent a tree of related genes which can be used to infer homology. Another example application is the finding of true sequences. Imagine you have a sequencing experiment that amplifies genes from an HIV sample, but you do not know how many successful mutations of HIV you have in the sample(infected people usually carry multiple versions because of how fast it mutates). After cleaning these sequences, clustering them together can reveal closely related groups. With the proper distance tweaking and statistical tricks, you can separate each real version of the virus into a cluster, revealing the prevalent mutations in the patient.
+This type of clustering repeatedly combines the closest points into a cluster that is the hybrid location of both points. The reason this is interesting to us is that it forms a tree of clusters, which can represent a tree of related genes which can be used to infer homology.
 
 ![hierarchical cluster](https://upload.wikimedia.org/wikipedia/commons/a/ad/Hierarchical_clustering_simple_diagram.svg)
 
