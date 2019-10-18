@@ -20,9 +20,13 @@ This is the most widely used "golden standard" method of today. The main idea is
 
 There is also a video explaining Illumina sequencing which you will watch in every single Bioinformatics class you take in the future, found [here](https://www.youtube.com/watch?v=fCd6B5HRaZ8). 
 
-***So, what does it matter?***
+Want to learn more about different sequencing methods? We have a document describing non Illumina methods in more detail [over here](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/extra_sequencing.md)
 
-What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA fragments. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
+***Comparing Sequencing Methods and Why they Matter***
+
+Sanger sequencing is another (older) sequencing method, but we will skip its methods to avoid taking too much time on sequencing. 
+
+What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA sequences. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
 
 These tiny reads overlap all over the place. If you imagine the true sequence these reads came from and place the reads where they came from, you will get many reads piled up over every base pair in the true sequence. The more reads pile up, the more accurately you can predict the actual sequence. A common measure that rates the robustness of an alignment is coverage:
 
@@ -53,15 +57,6 @@ Sanger sequencing is currently only really for small sequence lengths in a small
 
 Although the reads are short and the error rate is not as low as Sanger sequencing, Illumina sequencing produces so many sequences that it doesn't matter. Getting the most out of Illumina means getting the most out of its high throughput and per base coverage, which requires the proper software. 
 
-**PacBio**
-
-|Pros |Cons|
-|---|---|   
-|- long reads - up to 15kpb |- expensive |
-|- high throughput| - high error rate |
-
-Longer reads means that fewer reads are needed for the same coverage. Clearly, PacBio is best used for the reconstruction of longer genes or entire genomes. 
-
 Different tricks are available for different situations (Needleman-Wunsch for pairwise alignment or Burrows-Wheeler transform for aligning many reads to a single template), but we will be focusing mostly on how to use the tools rather than the algorithms within them. 
 
 TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
@@ -82,7 +77,7 @@ Based on a system where elements that are closer together are more similar than 
 
 Bioinformatics is often space and computation intensive, so we outsource our computational work to a bigger computer called a server.
 
-***Why Linux?*** The majority of servers run on Linux, a free operating system which inherited its predecessor's (GNU's) mission to give users freedom. Linux is completely open source, allowing users to see and modify any part of its inner workings. Linux is also extremely stable, allowing servers to be up for years at a time without restarting. Learning about 
+***Why Linux?*** The majority of servers run on Linux, a free operating system which inherited its predecessor's (GNU's) mission to give users freedom. Linux is completely open source, allowing users to see and modify any part of its inner workings. Linux is also extremely stable, allowing servers to be up for years at a time without restarting. 
 
 ## Task 2: get an ssh client 
 ***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
