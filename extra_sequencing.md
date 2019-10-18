@@ -30,3 +30,22 @@ This one is widely taught and known, but a little outdated.
 |- high throughput| - high error rate |
 
 Longer reads means that fewer reads are needed for the same coverage. Clearly, PacBio is best used for the reconstruction of longer genes or entire genomes. 
+
+**Sanger**
+
+|Pros |Cons|
+|---|---|   
+|- High precision - error rates of ~.001% |- low throughput   |
+|- long read length  |- expensive  |
+
+Sanger sequencing is currently only really for small sequence lengths in a small number of samples.
+
+**Illumina**
+
+|Pros |Cons|
+|---|---|   
+|- low cost  |- short reads   |
+|- high throughput   |- not cost effective for small number of targets|
+|- decent precision - error rate: 0.46% - 2.4% |   |
+
+Although the reads are short and the error rate is not as low as Sanger sequencing, Illumina sequencing produces so many sequences that it doesn't matter. Getting the most out of Illumina means getting the most out of its high throughput and per base coverage, which requires the proper software. 
