@@ -42,15 +42,16 @@ TLDR: There are numerous complex applications of bioinformatics algorithms, from
 
 **Clustering is the the process of assigning data points to groups in such a way that the elements in a group/cluster are more similar to each other than they are to those in other groups.** The definition of what it means to be similar can vary and is determined by the function we use to measure distance between two points. 
 
-**Hierarchical Clustering:** 
-
-This type of clustering repeatedly combines the closest points into a cluster that is the hybrid location of both points. The reason this is interesting to us is that it forms a tree of clusters, which can represent a tree of related genes which can be used to infer homology.
+## Some types of clusters:
+- Hierarchical Clustering: Repeatedly combines the closest points into a cluster that is the hybrid location of both points. The reason this is interesting to us is that it forms a tree of clusters, which can represent a tree of related genes which can be used to infer homology.
 
 ![hierarchical cluster](https://upload.wikimedia.org/wikipedia/commons/a/ad/Hierarchical_clustering_simple_diagram.svg)
 
-Our [lesson on clustering](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/6.%20Clustering.md) goes over several common methods of clustering in detail, as well as their biological meaning. 
+- K-means Clustering: Separates a dataset into k groups of points in such a way that the members of a cluster are as close as possible to the center of the cluster they belong to. This type of clustering can check that the datapoints we are observing cluster together by tissue type, experimental conditions, time points, etc. 
 
-*Side Note:* As you will soon learn in your CSE classes, implementation is important and the state of the art alignment and clustering programs do their job quickly and accurately because they attempt to do the minimum amount of work possible. Fast alignment programs like mafft use fancy tricks like Fourier tranforms and fast clustering algorithms often use simpler tricks like transforming into kmer representation. Bioinformatics has lots of data, so you should never attempt to solve a problem by going through all possible combinations or even the majority of all possible combinations. To give the classic stupid example, 80 sequences of length 1000 technically have over 1000^80 possible alignments which is a bit off from the 10^80 atoms in our universe. 
+- Fuzzy Clustering: Datapoints are not definitively assigned to a specific cluster, rather they are given a likelihood of belonging to a cluster. This can be used to ascertain levels of co expression between genes, revealing genes which may be under common regulatory control. 
+
+Our [lesson on clustering](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/6.%20Clustering.md) goes over several common methods of clustering in detail, as well as their biological meaning. 
 
 ## Getting Set Up for ssh
 
