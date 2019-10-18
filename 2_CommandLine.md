@@ -1,4 +1,4 @@
-# Your favorite rectangle: the terminal
+# The Linux Terminal 
 
 #### Skill: UNIX/Command Line + RNA-seq quantification
 
