@@ -14,7 +14,7 @@ There are several very common and difficult problems in bioinformatics worth kno
 
 **Illumina Sequencing:** 
 
-This is the most widely used "golden standard" method of today. The main idea is that DNA is fragmented into pieces, the pieces are copied many times over by PCR, attached to a flow cell, and replicated one base at a time. The modified nucleic acids Illumina uses emit light when they are bound. Illumina sequencing adds one base, measures the color output of the flow cell, adds a different base, measures the color output and repeats over and over. Here is a nice graphic depicting the process:
+This is the most widely used "golden standard" method of today. The main idea is that DNA is fragmented into pieces, attached to a flow cell, copied many times over by PCR, and the complement strand is determined one nucleotide at a time. The modified nucleic acids Illumina uses during the generation of complementary strands emit light when they are bound. Illumina sequencing adds one base, measures the color output of the flow cell, adds a different base, measures the color output and repeats over and over. Here is a nice graphic depicting the process:
 
 ![graphic explaining illumina](http://www.3402bioinformaticsgroup.com/wp-content/uploads/2016/07/NGS.png)
 
