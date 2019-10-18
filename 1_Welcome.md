@@ -2,7 +2,7 @@
 
 ## The Big Picture
 
-These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics novices some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. The crash course is always in development, so we ask for everyone to be patient and tell us when we are screwing up. Thanks! 
+These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We will look at some of the things bioinformaticians do for a living, then do some tasks with a Linux terminal. The crash course is always in development, so we ask for everyone to be patient and tell us when we are screwing up. Thanks! 
 
 # The Big Problems - What is the Purpoes of Bioinformatics?
 
