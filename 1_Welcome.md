@@ -32,9 +32,11 @@ These tiny reads overlap all over the place. If you imagine the true sequence th
 
 ![coverage](https://slideplayer.com/slide/5083621/16/images/4/Definition+of+Coverage.jpg)
 
-Alignment allows us to find how two or two thousand sequences line up, allowing us to identify single mutations, reduce error rates, build original(de novo) sequences, and analyze homology to build evolutionary trees. 
-
-Different tricks are available for different situations (Needleman-Wunsch for pairwise alignment or Burrows-Wheeler transform for aligning many reads to a single template), but we will be focusing mostly on how to use the tools rather than the algorithms within them. 
+Besides helping us reconstruct the DNA put into a sequencer, alignment can also
+- Determine which organism an unkown sequence comes from
+- Pinpoint locations where mutations have occured relative to a reference sequence
+- Help determine the evolutionary distance between sequences
+- Much much more, which we will go over in more detail in our [lesson on alignment](https://github.com/sabeelmansuri/Bioinformatics-Crash-Course/blob/master/5_Alignment.md)
 
 TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
 
