@@ -4,7 +4,7 @@
 
 These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics novices some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. The crash course is always in development, so we ask for everyone to be patient and tell us when we are screwing up. Thanks! 
 
-## Task 1: The Big Problems - What is the Purpoes of Bioinformatics?
+## The Big Problems - What is the Purpoes of Bioinformatics?
 
 When I first started taking classes for my major, I had no idea what I was supposed to solve with the skills I learned. Thus, the first crash course will include descriptions of some of the things we do. I know lecture style learning is not great, but personally I would have liked to learn about the major problems Bioinformaticians work on so I could feel some sense of purpoes. I will try to make the lecture quick!
 
@@ -60,7 +60,7 @@ Bioinformatics is often space and computation intensive, so we outsource our com
 
 ***Why Linux?*** The majority of servers run on Linux, a free operating system which inherited its predecessor's (GNU's) mission to give users freedom. Linux is completely open source, allowing users to see and modify any part of its inner workings. Linux is also extremely stable, allowing servers to be up for years at a time without restarting. 
 
-## Task 2: get an ssh client 
+## Task 1: get an ssh client 
 ***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
 
 **How to prepare for ssh:**
@@ -69,7 +69,7 @@ Bioinformatics is often space and computation intensive, so we outsource our com
 
 **Mac or Linux:** No preparation necessary, since you already have a native ssh client. 
 
-## Task 3: Aliview
+## Task 2: Aliview
 
 Okay, we have had enough of conceptual stuff. Let's get at it with some cool visuals. 
 
@@ -87,7 +87,7 @@ The SNP differences are obvious, but you will notice that there are weirder diff
 
 Here's another cool tool: Blast will quickly look up a sequence in the NCBI database and spit out similar sequences it finds. Now, go to aliview and click edit->delete all gaps in all sequences. Copy the first sequence into the clipboard. Google NCBI Blast and open up the first result. Paste the sequence into the big box in the top of the page and click **BLAST** at the bottom. After a few seconds, Blast should link you to a whole lot of glycoprotein that are... from the article these were published in! This is one of the basic uses of Blast - to figure out where a sequence comes from. 
 
-## Task 4: Explore your EC2
+## Task 3: Explore your EC2
 
 In your email, you should have a password from me. Your username for EC2 is the same as your ucsd username.
 
