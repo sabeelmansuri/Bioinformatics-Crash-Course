@@ -1,7 +1,3 @@
-### SSH address: ec2-13-58-94-107.us-east-2.compute.amazonaws.com
-### Talk to Mark if you don't have an account
-
-
 # Alignment
 
 #### Skill: More python and some knowledge of alignment methodology
