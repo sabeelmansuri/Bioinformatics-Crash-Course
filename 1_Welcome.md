@@ -75,8 +75,8 @@ These sequences are actually from HIV-1 glycoprotein envelopes from a person wit
 The SNP differences are obvious, but you will notice that there are weirder differences - like the >100 bp gaps formed in the middle. The truth is that I do not know why those are there! Those can be 
 
 1. Real differences in hypervariable loops
-2) non-functional virions
-3) RT/PCR artifacts
+2. non-functional virions
+3. RT/PCR artifacts
 
 Here's another cool tool: Blast will quickly look up a sequence in the NCBI database and spit out similar sequences it finds. Now, go to aliview and click edit->delete all gaps in all sequences. Copy the first sequence into the clipboard. Google NCBI Blast and open up the first result. Paste the sequence into the big box in the top of the page and click **BLAST** at the bottom. After a few seconds, Blast should link you to a whole lot of glycoprotein that are... from the article these were published in! This is one of the basic uses of Blast - to figure out where a sequence comes from. 
 
