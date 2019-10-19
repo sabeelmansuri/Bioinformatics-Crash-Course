@@ -60,7 +60,7 @@ Alright, enough of the conceptual stuff. Let's get our hands dirty.
 
 ### Prerequisites
 
-You will need Java to proceed. If you do not have it, go [here](java.com) and press the big red install button in the middle of the page.
+You will need Java to proceed. If you do not have it, go [here](https://www.java.com/en/) and press the big red install button in the middle of the page.
 
 Aliview is a sequence viewer with a bunch of built-in tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. 
 
