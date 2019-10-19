@@ -1,231 +1,101 @@
-# The Linux Terminal 
+# The Linux Terminal
 
-#### Skill: UNIX/Command Line + RNA-seq quantification
+Bioinformatics is often memory and computation intensive, so we'll be outsourcing our computational work to a bigger computer called a server. This server will run on the Linux operating system. (This is no different than your laptop running on a Windows or Mac operating system.)
 
-The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to use alignment software. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize on the first try**. Use the commands listed below as a reference to look at. Actually learning (or memorizing) the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction, a reference sheet, and generalized example.
+***Why Linux?*** The majority of servers run on Linux, a free operating system which inherited its predecessor's (GNU's) mission to give users freedom. Linux is completely open source, allowing users to see and modify any part of its inner workings. Linux is also extremely stable, allowing servers to be up for years at a time without restarting.
 
-#### About the RNA-seq Tasks
+## How Can I Connect?
 
-As a way of practicing command line skills, this lesson will also go through the motions of a very common problem in bioinformatics: quantifying gene expression in RNA-seq data. Today we will be looking at a specific type of RNA, called lnc RNA. Long Non coding(lnc) RNA, strands of 200 or more non coding nucleotides are implicated in a range of gene regulation roles, from epigenetic X inactivation to transcriptional control. The irregular expression of lnc RNA is involved in the parthenogenesis of just about every cancer, including gastric cancer.
+***Secure Shell(ssh)*** is a protocol which creates a secure channel for two computers to communicate. This is how we will connect to our server.
 
-Due to data storage restrictions, I have subsampled the RNA-seq data for you and placed it in ```/srv/lesson2/sub_Gastric_Ctr``` and ```/srv/lesson2/sub_Gastric_Affect``` (sub stands for subsampled). The RNA-seq data was obtained through a paired-end illumina sequencing protocol. This means that there is a forward and a reverse read for every fragment which was sequenced. According to illumina, this makes for better alignment to a reference genome. You will find there is a file called ```sub_SRR2073159_1.fastq``` and ```sub_SRR2073159_2.fastq```, which are the forward and reverse reads of the same fragments. Software made for illumina data processing will always have a paired-end option, so pay attention to what kind of data you have! If you want to look at where I got the data for today's lesson, [go here](http://cancerpreventionresearch.aacrjournals.org/content/9/3/253) and take a look at the "Next-generation sequencing analyses" section. It will give you an accession number corresponding to the experiment's data. Accession numbers will be a story for a future lesson(downloading data takes horridly long so I'm going to have to think of a way to get around this while teaching the subject). 
+**Mac or Linux users:** skip to **Exploring the Server**. Your device has a built-in ssh client!
 
+**Windows users:** We do not like Windows terminals, you do not like Windows terminals, no one likes Windows terminals. Go to [The Putty website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty. A window should appear to guide you through the installation.
 
-## But first... EC2
+## Exploring the Server
 
-I set up accounts for everyone based on the usernames from last time. Click [here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) for the list of usernames.
+We've created an account for you on our server (which is, by the way, called EC2). Your username for EC2 is the same as your UCSD username. Your password has been emailed to you.
 
-***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
+### Connecting
 
-**Windows:** Open putty, paste ```my_username@ec2-18-188-27-13.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
+**Mac or Linux:** Open an application on your device called "Terminal". This should open up a window that prompts you to enter some text. Copy-paste this command into the terminal: ```ssh your-username@ec2-3-16-81-18.us-east-2.compute.amazonaws.com```. Replace "your-username" with your UCSD username, and press enter. You're now connected to EC2!
 
-**Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh my_username@ec2-18-188-27-13.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
+*Note: you may need to use Ctrl-shift-V to paste into terminal.*
 
-**Some things to keep in mind:** I have some promotional credits for EC2, but they are not infinite. Please help me not run over budget by following my instructions and asking if you are unsure of what you are doing. Processing power is plentiful and the rate charged is constant, but storage can add up if everyone uploads large files. Please only upload what I ask you to upload. A few megabytes here and there is fine but please do not go uploading several gigabytes at a time. In addition, the actual process of uploading costs no money but downloading from EC2 does. Again, just download when I ask you to. Thanks!!
+**Windows:** Open putty, paste ```ec2-3-16-81-18.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type any name of your choice under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
 
----
+### Your First Commands
 
-## Passwords!
-
-Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd my_username``` and follow the prompts to set your own password. 
-
----
-
-Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
+1. Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
 
-## Why should I learn this?
+2. The password we provided you with isn't particularly safe. Let's change your password using the terminal. Type ```passwd [your-username]``` and follow the prompts to set your own password. (Replace "your-username" with your username.)
 
-Quoting Mark's PI: "ja, true, you need that shit."
+### So... Commands?
 
-Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no Graphical User Interface (GUI), and any programmer should have a healthy relationship with their system.  
+Commands are things you can type into the terminal to perform different actions. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize them on the first try**. 
 
-## How do I see what a command does?
+How do you know what command to use to do sometihng you want? Simple: for now, we'll explain commands as you need them. Actually learning (or memorizing) the commands will come naturally from repeated use of the terminal.
 
-Anytime you need a refresh on what a command does, type the command line with the --help option like so: ```ls --help```. If that does not work, try ```man ls```. I will go over why different commands have different help syntax in a bit. 
+*Note: Anytime you need a refresher on what a command does, type the command line with the --help option like so: ```ls --help```. If that does not work, try ```man ls```. One (or both) of these will pull up information on how to use the command. Can you figure out what the ls command does?*
 
-## Navigation, manipulation, and permission
+### What Am I Looking At?
 
-In order to get started, we need to be able to do the same thing we do in a file explorer in the command line. You may find it inconvenient at first, but with time these commands become faster and more versatile than the file explorer's interface. 
+When you open up your laptop, you are presented with your "Desktop". When you open up a terminal (or connect to a server via ssh!), you are presented with your "Home".
 
-The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your use folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
+When you want to open up the "Pictures" folder on your laptop, you find the folder labeled "Pictures", and then open it. Uh-oh... we don't know how to (1) find something or (2) open something!
 
-```screen``` A way to have multiple terminal instance from a single screen. Start screen by typing ```screen -a```, open new screens with ```ctrl a c```, move between screens with ```ctrl a n```. If you already have screeens working in the background, you can access them with ```screen -dr``` (so you don't have to start with a blank terminal every time). 
+Let's take a step back and talk about all the files in your computer are organized. As you know, you can have different files stored in different places on your computer. You do this by creating folders (inside of other folders), and creating files inside of them. This is **exactly how our server works**, except we call folders "directories".
 
-*Note: the ```ctrl d``` command for closing terminals will close one screen window at a time, as one would (hopefully) expect it to do* 
+Similar to how "Desktop" is a folder on your computer, "Home" is a directory on your account on the server. And similar to how your "Desktop" can have folders created in it, so can "Home". You can look at what's inside with the `ls` command, which is short for "list". Type `ls` to see what's in your "Home" directory. (We now know how to find something!)
 
-```cd```(change directory) Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
+### What Can I Do?
 
-```ls```(list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
+There's nothing in your home directory! Let's change that by creating a directory. You can do this with the `mkdir` command. Let's create a directory called "software" by doing `mkdir software`. Confirm that this worked by looking at your home directory again.
 
+Now that we can find the "software" directory, let's move into it (the equivalent of opening a folder on your laptop). Type `cd software` to **c**hange **d**irectory to software. Next, type `ls` and confirm that nothing is in this freshly created directory. Create another directory here called "docs" (yes, directories can contain other directories, much like folders can contain folders!).
 
-```mkdir```(make directory) Creates a directory with the same name as the argument you give it. 
+Great! You can now make a directory and enter it. The last step is to exit the directory. You can do this by just telling the terminal to change directory to whatever contains the current directory (i.e. the parent directory). The alias for the parent directory is `..`. Confirm you've moved back to the home directory using `ls`.
 
----
+On your laptop, if you want to get to a deeply nested folder, you have to keep unfolding the layers by opening multiple folders. Wouldn't it be nice to be able to just get directly to a folder? We can do this using `cd` by specifying multiple layers we want to change into. For example, we just created a "docs" inside of "software". We can get into this directory by typing `cd software/docs`, where the terminal will recognize "/" as a sign that what follows will be inside of "software".
 
-### TODO: Make a Software Folder
+Finally, let's go back home. You might think that `cd ../..` will take you there, and you would be right! You'd look at the parent's parent, which is the home directory. However, there's an easier way. Much like `..` is an alias to the parent directory, `~` is an alias to your home directory. Simply do `cd ~` from anywhere and you'll end up home!
 
-Navigate your terminal to your home directory (the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to... keep your software in it. 
+`.` is a special alias too! Can you figure out what it refers to? Try `cd .` and see where you go.
 
-*Note: Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.*
+### [Your Turn!] Investigate Genetic Data
 
----
+Let's get to work with some real genetic data!
 
-```cp```(copy) copies the file in the first argument to the directory in the second argument. ```cp file1.txt file2.txt``` makes a copy of file1.txt called file2.txt in the same location. ```cp file1.txt ..``` places a copy of file1.txt (called file1.txt) into the parent directory. 
-
-```rm```(remove) deletes a file. Careful with this one, there is no convenient command to remove files from the trash on linux. Once deleted, gone forever. ```rm file.txt```
-
-```mv```(move) like copy, but the original file disappears. 
-
-```wc```(word count) counts things like lines, words, and characters. ```wc -l file.txt``` prints the number of lines in file.txt. 
-
-```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7 (first for owner, second for group, third for everyone else).
-
-***Permission	rwx	Binary***
-
-7	read, write and execute	rwx 111
-
-6	read and write	rw-	110
-
-5	read and execute	r-x	101
-
-4	read only	r-- 100
-
-3	write and execute	-wx 011
-
-2	write only	-w- 010
-
-1	execute only	--x	001
-
-0	none	---	000
-
-## Tying It All Together 
-
-### Piping 
-
-Piping is stringing multiple commands together to perform some larger task. You can string commands together using the `|` symbol like so:
-
-```
-cat file.txt | grep "hello"
+Start in your home directory. Create and enter a directory called "week1". Then run the following command:
+```shell
+wget https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/ls_orchid.fasta
 ```
 
-This will first perform the `cat` command: it will attempt to print everything inside file.txt to the terminal, but the pipe symbol `|` will stop it. Instead, everything from file.txt will get pushed through the `grep` command, which will print out any line that contains "hello". The result is only the lines containing "hello" in file.txt will be printed out.
+You've just downloaded a file full of a bunch of genetic data! You can take a peek at the first few lines by doing `head ls_orchid.fasta`. Your job is to analyze this file.
 
-## Getting yer feet wet
+You have 3 tasks:
 
-Here are a quick batch of tasks/exercises using the command line (and different commands) in roughly increasing order of difficulty:
+1. Print all the contents of the downloaded dataset to terminal window ("standard output")
+2. Print how many lines there are in the file
+3. Print how many lines there are in the file **THAT CONTAIN GENETIC DATA** (no headers)
 
-##### (0.) Copy-paste the following two commands into your terminal in order and hit enter.
-`cd ~`  
-`cp -r ../smansuri/parent/ ~`
+The commands cheat sheet below and the hint above about deciphering commands you're not familiar with are your friends. Good luck!
 
-##### 1. Enter the new directory (hint: use `ls` and `cd`)
+### Once you're done, show your answers to an instructor to get checked off. Congratulations! You've completed the first lesson of the Bioinformatics Crash Course!
 
-##### 2. Name all of the files (not other directories!) inside this directory. How many are there? (hint: use `ls`)
+## Commands Cheat Sheet
 
-##### 3. How many lines are in file1.txt? (hint: use `wc`)
+```ls```(list files) Print out the contents of a directory. 
 
-##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count too. (hint: use a pipe of `grep` and `wc`)
+```mkdir```(make directory) Create a directory with the same name as the argument you give it.
 
-##### 6. (Challenge 1) Execute the "instructions" file. Follow the instructions. (hint: `./instructions`)
+```cd```(change directory) Change directory to whatever is specified.
 
-##### 7. (Challenge 2) Attempt to delete the directory you downloaded in step 0. This directory is called "parent".
+```head``` Print the beiginning of the specified file to the terminal.
 
+```cat``` Print whatever follows to the terminal. If a file name is specified, print the contents to the terminal.
 
-## Downloading
+```wc``` (word count) Print the number of words in the file name specified after the command.
 
-```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
-
-```curl``` Will download stuff for you. The most simple and relevant combination of options is ```curl -L https://examplelink.com -outdir .``` which will download from https://examplelink.com into the current directory (indicated by the dot). 
-
-```apt-get```Handles packages from the apt library for Debian based systems. However, this installs packages system-wide so you are not going to be able to use it on EC2. The mac equivalent is homebrew. ```sudo apt-get install google-chrome-stable``` will install chrome. 
-
----
-
-### TODO: Get FastQC and Kallisto
-
-Quality of genetic information is important! FastQC is the gold standard for quality control in the bioinformatics field. Google "download FastQC" and find the instructions. Make sure to select the correct package for a linux system, then go think about how you would get that package onto EC2. There are two main ways to do this. 
-
-*Hint: the last three commands mentioned contain both of the two ways you can get FastQC onto EC2*
-
-Next, we need Kallisto, which describes itself as "a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads." Google "download kallisto" and find the appropriate file (it should be a .tar.gz). Use the same method you used for FastQC to transfer it to EC2(or challenge yourself to find the second way).
-
----
-
-## Unpackaging
-
-Much of the data people want to download is large, but they want it fast. That's why things like .zip, .tar, .gz and such exist. Those are the file extensions of compressed data. In order to make software work, it must be unpackaged.
-
-```unzip``` Is exactly what it sounds like. This command unzips .zip file types. 
-
-```tar```(tape archive) Is the command linux uses to package and unpackage stuff. This command has an incomprehensible amount of confusing options, so let me just copy paste the ones you should care about. ```tar -xvf file.tar.gz -C .``` unpacks a .tar.gz file into the current directory and ```tar -xvf -C .``` unpacks a .tar file into the current directory. The -C option indicates the files' destination.
-
----
-
-### TODO: Unpackage your FastQC Kallisto
-
-Now you have your fastqc*.zip in your software folder. In order to use it, you're going to have to unpackage it. Look a couple lines up to figure out how. 
-
-The same goes for your kallisto .tar.gz. This is a filetype you will run into often when dealing with linux, since it is the default way linux compresses a folder. If you look in the Unpackaging section of this document, you will find instructions on how to open up this strange creature. 
-
----
-
-## Compilation
-
-What is compilation? It is the conversion of one programming language into another. Typically, it is a conversion of what's known as a high-level language (C, Java, Python, etc) to a low level language (binary, assembly). CPUs understand only very very very basic logic, so a super smart program called a compiler has to convert your convoluted and messy code into the simple delicious porridge that the CPU can eat(execute).
-
-**shell scripts and python files** do not need compilation.
-
-**java** compiles by ```javac filename.java```
-
-**C** ```gcc -c filename.c``` to compile and assemble. 
-
-Note: Much of the time, software you download online is already in binary form so there is no need to compile. This is not always the case!
-
-## Execution
-
-**/bin**(binaries) contains your executable files and shells. The computer has a list of folders it searches through to find executables when you type a command and the /bin directory is one of them. When you download software, you should place the executable file or a symbolic link into the /bin directory.
-
-**shell script** a simple ```./executable``` will suffice to execute a script. 
-
-**python** will automatically compile for you before executing with the command ```python filename.py```. 
-
-**java** can be executed with ```java compiledfilename```
-
-**C** is executed like a shell script ```./out```
-
----
-
-### TODO Actually Quantify Stuff
-
-Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ```/srv/lesson2/sub_Gastric_Ctr``` and ```/srv/lesson2/sub_Gastric_Affect```directories. FastQC will produce some .html files, which I will just show on the large screen and explain in the interest of saving time. 
-
-Kallisto is a little more complicated. Our first step is to build a kallisto index file, which will assign an index to each RNA transcript we will quantify and optimizes the quantifying procedure in general. Where did we get these RNA transcripts you ask? Good question! I googled "mouse lncRNA database" and eventually happened upon a [website](https://www.gencodegenes.org/) where there was a fantastically easy to download .fasta file full of lnc RNA sequences from mice. Anyways, go back to the kallisto website and look at the instructions on how to index a file. The list of target sequences I got from gencode is at ```/srv/lesson2/gencode.vM17.lncRNA_transcripts.fasta``` and you might want to specify the name for the destination file. 
-
-Next, you will need to look at the ```kallisto quant``` command. Specify an output folder, the index you made just now, set --bootstrap-samples=100, and finally include the forward and reverse paired end files at the end. You will run the quant command 4 times for the 2 control and 2 affected files. You might want to create 4 separate output folders in order to keep everything organized. 
-
-The last part will be a bit of a walkthrough, since it is kind of complicated (I don't understand every option either, don't worry about it). Open up R  by simply typing R into the terminal and pressing enter. Below is the template for what you need to execute in R in order to compare transcription levels. Note the parts where you need to enter a path and replace them with your own filepaths
-
-
-```
-library("sleuth")
-#paths to Kallisto outputs from MPNST study
-sample_id = c("/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep2", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep2")
-
-kallisto_dirs = file.path(sample_id)
-s2c = read.table(file.path("/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/sleuth_Gastric_info.txt"), header = TRUE, stringsAsFactors=FALSE)
-s2c = dplyr::mutate(s2c, path = kallisto_dirs)
-
-so = sleuth_prep(s2c, extra_bootstrap_summary = TRUE)
-so = sleuth_fit(so, ~condition, 'full')
-so = sleuth_fit(so, ~1, 'reduced')
-so = sleuth_lrt(so, 'reduced', 'full')
-
-sleuth_table <- sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE)
-sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
-
-
-write.table(sleuth_significant, "/home/my_username/sleuth_output/", sep="\t", quote=FALSE)
-gg=plot_transcript_heatmap(so, transcripts, units = "tpm", trans = "log", offset = 1)
-ggsave("/home/my_username/plots/", plot=gg)
-```
+```grep``` Print out lines matching the specified conditions.
