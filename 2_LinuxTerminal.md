@@ -24,7 +24,7 @@ We've created an account for you on our server (which is, by the way, called EC2
 
 **Windows:** Open putty, paste ```ec2-3-16-81-18.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type any name of your choice under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
 
-Password: ubic2019 . Unless you had an account last year, in which case it is the password you made. 
+**Password:** ubic2019 . Unless you had an account last year, in which case it is the password you made. 
 
 ### Your First Commands
 
