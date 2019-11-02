@@ -33,7 +33,7 @@ Last session, we said that we believe in active learning. Below are a bunch of e
 
 ##### 5. How many lines in file2.txt contain a period? (*Hint: The answer is not 60*)
 
-##### 6. Delete the directory you downloaded in step 0.
+##### 6. Confirm your answers to 2-5 with an instructor or tutor. Then, delete the directory you downloaded in step 0.
 
 ## Your Own File
 
