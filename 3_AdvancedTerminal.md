@@ -21,7 +21,17 @@ Last session, we said that we believe in active learning. Below are a bunch of e
 
 ##### 4. file1.txt contains the text of a Sherlock Holmes book. How many lines of the file does it take to recount his tale in Bohemia?
 
-##### 5. How many lines in file2.txt contain a period? (The answer is not 60)
+<details>
+  <summary>Stumped? Click me!</summary>
+    
+  Does this command give you an idea of what you can search for?
+  
+  ```shell
+  head -n 70 file1.txt | tail -n 22
+  ```
+</details>
+
+##### 5. How many lines in file2.txt contain a period? (*Hint: The answer is not 60*)
 
 ##### 6. Delete the directory you downloaded in step 0.
 
@@ -68,7 +78,7 @@ Create an executable file called `greet.sh` that can be executed to print "Hello
   4. [Optional, depending on if #3 fails] How can I make a file executable?
 </details>
 
-Update your program to print "Hello [your_username]". This should NOT be hardcoded, meaning if your program prints "Hello joesmith" on your laptop, it should print "Hello smansuri" on mine without any changes.
+Update your program to print "Hello [your_username]". This should NOT be hardcoded, meaning if your program prints "Hello jsmith" on your laptop, it should print "Hello smansuri" on mine without any changes.
 
 ## Python Basics
 [Click here](/4_Python.md) to move on to the next part of this lesson.
