@@ -4,7 +4,7 @@
 
 So far, we've been working only on the command line. However, you'll often want to do more than the command line easily allows. Today, we're going to be learning the basics of one of the most popular languages for doing that: Python.
 
-
+*Side note: If you're familiar with Python, you many know there are two commonly-used versions, Python2 and Python3. Today, you will be using Python3, since Python2 is being deprecated at the end of this calendar year. They're very similar, so the skills you learn today should translate to any Python program you come across.*
 
 ## Getting Started
 
@@ -12,14 +12,14 @@ Create a new directory called "pydir". Enter the directory.
 
 Python should already be installed on your workstations. Let's make sure: Type the following on the command line:
 ```shell
-python
+python3
 ```
 You should see something that looks like this:
 ```shell
-Python 2.7.15rc1 (default, Nov 12 2018, 14:31:15)
-[GCC 7.3.0] on linux2
+Python 3.6.8 (default, Oct  7 2019, 12:59:55) 
+[GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>>
+>>> 
 ```
 Type exit(), and move on.
 
@@ -28,12 +28,12 @@ Type exit(), and move on.
 ### Hello World!
 We're going to start by taking a quick look at how Python code is written. Create a file called Hello.py. The ".py" extension signals that you will be writing in python. Inside the file put:
 ```python
-print "Hello World"
+print("Hello World")
 ```
 
 Great! Now save + close the file, and run your newly-written program by typing the following on the command line:
 ```shell
-python Hello.py
+python3 Hello.py
 ```
 
 Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program print "Hello World". That was pretty trivial... let's try something more interesting.
@@ -55,7 +55,7 @@ At this point, you can remove the "#" from the start of the last line (this is c
 What if you only wanted to print *part* of your string, not the whole thing? Remember that a string is like a list (with the first character at index 0). So, what if we wanted to print just "Hello"? We can use specify a range of indexes to print from like so:
 
 ``` python
-print myString[0:5]
+print(myString[0:5])
 ```
 
 Note that the first number is the position of the first character printed (0 = 'H'), while the second number is **PAST** the last character printed (5 = ' ', but we only print up to index 4).
@@ -64,8 +64,8 @@ Note that the first number is the position of the first character printed (0 = '
 
 Indentation in Python **matters**. Try adding a second print statement your "Hello.py" file so it looks like this:
 ``` python
-print "Hello World"
-    print "Indented line"
+print("Hello World")
+    print("Indented line")
 ```
 
 Now, try to run "Hello.py". Python will complain that there's a problem with your indentation (there was no need to indent, but you did anyways). You'll learn more about when to indent in the next section. Speaking of which, it's about time for some bioinformatics.
@@ -124,7 +124,7 @@ file = open("test.fasta", "r")
 
 for line in file:
   if line[0] == ">":
-    print line
+    print(line)
 ```
 
 Run Loop.py and see what happens. Voila.
