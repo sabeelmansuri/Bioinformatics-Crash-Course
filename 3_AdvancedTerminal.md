@@ -1,7 +1,5 @@
 # Advanced Command Line + Python
 
-### EC2 Server: ec2-3-14-132-119.us-east-2.compute.amazonaws.com
-
 ### Welcome Back!
 
 Welcome to week 2 of the Crash Course. Today's lesson will be split into two distinct topics. The first builds on the skills you developed [last session](/1_Welcome.md), testing and enforcing your understanding of the command line. The second will introduce you to Python.
