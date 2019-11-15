@@ -86,6 +86,8 @@ The commands cheat sheet below and the hint above about deciphering commands you
 
 ### Once you're done, show your answers to an instructor to get checked off. Congratulations! You've completed the first lesson of the Bioinformatics Crash Course!
 
+### Next, try our [second lesson](/3_AdvancedTerminal.md)
+
 ## Commands Cheat Sheet
 
 ```ls```(list files) Print out the contents of a directory. 
