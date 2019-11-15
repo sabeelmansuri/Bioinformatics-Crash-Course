@@ -133,3 +133,5 @@ Run Loop.py and see what happens. Voila.
 Modify Loop.py so that it counts the number of G's and C's in the DNA sequences. Be sure not to count the header files. This value has real biological significance that you can read about [here](https://en.wikipedia.org/wiki/GC-content).
 
 ### Congratulations! You've completed Week 2 of the Bioinformatics Crash Course.
+
+### Next, try our [third lesson](5_Biopython.md)
