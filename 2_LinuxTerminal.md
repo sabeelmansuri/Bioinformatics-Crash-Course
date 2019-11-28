@@ -18,11 +18,11 @@ We've created an account for you on our server (which is, by the way, called EC2
 
 ### Connecting
 
-**Mac or Linux:** Open an application on your device called "Terminal". This should open up a window that prompts you to enter some text. Copy-paste this command into the terminal: ```ssh your-username@ec2-3-16-81-18.us-east-2.compute.amazonaws.com```. Replace "your-username" with your UCSD username, and press enter. You're now connected to EC2!
+**Mac or Linux:** Open an application on your device called "Terminal". This should open up a window that prompts you to enter some text. Copy-paste this command into the terminal: ```ssh your-username@[the host for this week's lesson]```. Replace "your-username" with your UCSD username, and "[the host for this week's lesson]" with the EC2 host found on the front page of today's lesson, and press enter. You're now connected to EC2!
 
 *Note: you may need to use Ctrl-shift-V to paste into terminal.*
 
-**Windows:** Open putty, paste ```ec2-3-16-81-18.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type any name of your choice under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
+**Windows:** Open putty, paste ```[the host for this week's lesson]``` into the Host Name section (replacing "[the host for this week's lesson]" with the EC2 host found on the front page of today's lesson) and select port 22 and SSH on that same page. Type any name of your choice under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
 
 **Password:** ubic2019 . Unless you had an account last year, in which case it is the password you made. 
 
