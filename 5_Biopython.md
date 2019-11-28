@@ -1,6 +1,6 @@
 # Bioinformatics x Python
 
-### EC2: ec2-18-217-6-223.us-east-2.compute.amazonaws.com
+### EC2: Please use the EC2 host for this week's lesson.
 
 ## Welcome
 
