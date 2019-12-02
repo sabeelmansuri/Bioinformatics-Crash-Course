@@ -62,7 +62,7 @@ Make a copy of your input FASTQ file, available at `~/../smansuri/raw.fastq`. Ha
 </details>
 
 ## Submitting Your Solution
-First, a sanity check. Your answer should be in the low-900's. 
+First, a sanity check. Your answer should be in the mid-900's. 
 
 If your answer matches these criteria, send Sabeel an email titled **[UBIC] Completed Week 4** containing your count.
 
