@@ -49,7 +49,7 @@ BCD
 @SAMPLE1 has an average quality score of 69 (from the average ASCII of `DEF`), and no character is under 50. We will keep this sequence.
 @SAMPLE2 has an average quality score of 67 (from the average ASCII of `BCD`), and no character is under 50. We will not keep this sequence.
 
-The output, therefore, would be 1:
+The output, therefore, would be 1.
 
 Make a copy of your input FASTQ file, available at `~/../smansuri/raw.fastq`. Have fun!
 
