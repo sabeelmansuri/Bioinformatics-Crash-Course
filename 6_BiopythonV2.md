@@ -87,13 +87,9 @@ Recall the two markers that could suggest your unknown sample may, in fact, be r
 
 Follow the instructions in the file.
 
-## BLAST
+### Congratulations! You've completed Week 3 of the Bioinformatics Crash Course.
 
-Running BLAST from Biopython will be a part of your challenge next lesson! Stay tuned!
-
-## Congratulations! You've completed Week 3 of the Bioinformatics Crash Course.
-
-## Next, try our [fourth lesson](/7_Challenge1.md)
+### Next, try our [fourth lesson](/7_Challenge1.md)
 
 #### Credits
 Exercises are adapted from [Rosalind](http://rosalind.info), the official [Biopython tutorial textbook](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf), and a [course](http://disi.unitn.it/~teso/courses/sciprog/python_biopython_exercises.html) from the University of Trento.
