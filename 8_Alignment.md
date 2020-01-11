@@ -79,5 +79,7 @@ D_db.fasta and J_db.fasta are the databases of known human diversity and joining
 
 Now that we are familiar with what alignment has to offer, let us get hands on with a specific implementation: 
 
+# Codon Alignment
 [Challenge: Codon Alignment](/8_2_Codon_Alignment_Challenge.md)
+
 This challenge describes a method of alignment that can be used to track the differences between sequences on the codon level. The goal is achieved with mutliple sequence and some basic sequence manipulation tricks. 
