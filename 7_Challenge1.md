@@ -65,3 +65,5 @@ First, a sanity check. Your answer should be in the mid-900's.
 If your answer matches these criteria, send Sabeel an email titled **[UBIC] Completed Week 4** containing your count.
 
 ## Congratulations! You've completed Week 4 AND Quarter 1 of the Bioinformatics Crash Course.
+
+### Next, try our [fifth lesson](/8.1_Alignment.md)
