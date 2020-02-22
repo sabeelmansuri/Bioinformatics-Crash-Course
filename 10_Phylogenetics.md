@@ -1,10 +1,5 @@
 # Phylogenetics
-#### Skills: Biopython, phylogenetic analysis
-
-#### Files:
-(They'll be downloaded with different names than many or single)  
-[many.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/phyloxml_examples.xml)  
-[single.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/apaf.xml) 
+### EC2: ec2-3-15-202-20.us-east-2.compute.amazonaws.com
 
 Today's lesson is going to cover basic phylogenetic motifs as well as phylogenetic analysis in a Python environment. Let's get started!
 
@@ -163,6 +158,10 @@ In the lab, you're often not going to be given an explanation (such as provided 
 
 **Input**   
 Many times, phylogenetic trees are exported as XML files. XML stands for eXtensible Markup Language, and is used in a wide range of applications that require storage or transport of data in a structured fashion. Provided are two XML files, `single.xml`, containing one phylogenetic tree, and `many.xml`, containing many different phylogenetic trees.
+
+(They'll be downloaded with different names than many or single)  
+[many.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/phyloxml_examples.xml)  
+[single.xml](https://github.com/biopython/biopython/blob/master/Tests/PhyloXML/apaf.xml) 
 
 **Output**  
 When your program is executed, the following should be printed to the terminal for every tree (from both files):  
