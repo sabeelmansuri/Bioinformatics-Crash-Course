@@ -1,7 +1,5 @@
 # Clustering
 
-## EC2: ec2-3-133-148-149.us-east-2.compute.amazonaws.com
-
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
 
 #### Syntax note:
