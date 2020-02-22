@@ -151,7 +151,8 @@ This model is an agglomerative (bottom-up, or merging) clustering method. We've 
 Distance is equal to the proportion of non matching nucleotides, so lower distance = closer relationship.
 
 #### Blastn
-Matches are worth 5 points, while mismatches are worth -4 points. The formula to calculate the final score is 1 - (matches*5-mismatches\*4)/(length\*5). 
+Matches are worth 5 points, while mismatches are worth -4 points. The formula to calculate the final score is:
+`1 - (matches*5-mismatches\*4)/(length\*5).` 
 
 #### Trans
 This scoring takes the difference in transitions(purine->purine or pyrimidine->purine) vs transversions(purine->pyrimidine and vice versa) into account. Transversions are less likely to occur, so they are scored -6 compared to the -1 for transitions. Matches are given a score of 6. 
