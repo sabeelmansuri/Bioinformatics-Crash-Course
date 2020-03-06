@@ -1,4 +1,4 @@
-# Challenge 1
+# Challenge 2
 
 ## Welcome
 Welcome to Week 8 of the Crash Course! This will be the final session for the introductory part of our program. We hope that you'll apply for the advanced topics that we'll present in Spring.
