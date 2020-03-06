@@ -1,5 +1,4 @@
 # Phylogenetics
-### EC2: ec2-3-15-202-20.us-east-2.compute.amazonaws.com
 
 Today's lesson is going to cover basic phylogenetic motifs as well as phylogenetic analysis in a Python environment. Let's get started!
 
