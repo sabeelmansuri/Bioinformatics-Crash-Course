@@ -43,8 +43,6 @@ When your program is executed, the following should be printed to the terminal f
 
 *Clade depth is defined by the number of terminal nodes.
 
-## Problem 3
-
 ## Submitting Your Solutions
 Send Sabeel an email titled **[UBIC] Completed Week 8** containing your output for the previous 3 problems.
 
