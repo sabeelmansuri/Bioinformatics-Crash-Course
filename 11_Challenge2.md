@@ -24,6 +24,9 @@ However, we don't just want to throw you off the deep end. If you do get stuck o
 ### Good luck, have fun!
 
 ## Problem 1
+Find the 100th Fibonacci number (without Googling!). 
+
+You may try to write a recursive solution, but it will not run in time. Perhaps this[https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/] can help?
 
 ## Problem 2
 In the lab, you're often not going to be given an explanation (such as provided above) of how to perform a task. This challenge will test your ability to use your resources (internet, documentation, etc.) to extend phylogenetic analysis given only input and output.
