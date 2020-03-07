@@ -3,7 +3,7 @@
 ## Welcome
 Welcome to Week 8 of the Crash Course! This will be the final session for the introductory part of our program. We hope that you'll apply for the advanced topics that we'll present in Spring.
 
-This week's lesson is, in some ways, a "final exam" that covers the skills you've learned in Weeks 1-10. It's designed to be more challenging than anything we've done so far, so don't be discouraged if you have to think things over (and fail) before succeeding!
+This week's lesson is, in some ways, a "final exam" that covers the skills you've learned in Weeks 1-10.
 
 ## Instructions
 ### Coverage
